@@ -26,8 +26,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-	db.select('*').from('users')
-	.then(data => res.json(data))
+	console.log('So far so good!')
 })
 
 app.post('/signin', signin.handleSignin(db, bcrypt))
